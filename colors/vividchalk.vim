@@ -85,11 +85,12 @@ hi link diffLine                PreProc
 hi link diffSubname             Comment
 
 call s:hifg("Normal","#EEEEEE","White",87)
-if &background == "light" || has("gui_running")
-    hi Normal guibg=Black ctermbg=Black
-else
-    hi Normal guibg=Black ctermbg=NONE
-endif
+" leaving any of these causes xterm changing background color on vim exit
+"if &background == "light" || has("gui_running")
+"    hi Normal guibg=Black ctermbg=Black
+"else
+"    hi Normal guibg=Black ctermbg=NONE
+"endif
 highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
 highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
 "if &t_Co == 256
